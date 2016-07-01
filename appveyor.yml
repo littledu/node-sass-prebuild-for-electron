@@ -20,12 +20,13 @@ environment:
       secure: XRWyQSCo7yWHH7LN5AUlFd3UYl/T6ZAc7WiK4NJJGAKocvmEm7ait8jm+y51CZ6c
   matrix:
     - nodejs_version: 5.10.0
-      platform: x86
-    - nodejs_version: 5.10.0
-      platform: x64
 
 matrix:
   fast_finish: true
+
+platform:
+  - x86
+  - x64
 
 install:
   - ps: Install-Product node $env:nodejs_version
