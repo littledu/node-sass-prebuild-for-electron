@@ -38,7 +38,7 @@ install:
   - cd node-sass
   - git submodule update --init --recursive
   - npm install
-  - node ..\src\downloadScripts
+  - node ..\src\downloadScript
   - node scripts\build -f
   - cd ..\src\upload
 
