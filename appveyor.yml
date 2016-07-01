@@ -38,7 +38,6 @@ install:
   - cd node-sass
   - git submodule update --init --recursive
   - npm install
-  - cd node-sass
   - node scripts\build -f
   - cd ..\
   - node build
