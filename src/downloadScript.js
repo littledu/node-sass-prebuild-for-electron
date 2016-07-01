@@ -1,8 +1,8 @@
 "use strict";
 
-var path = require('path');
-var http = require('http');
-var fs = require('fs');
+const path = require('path');
+const http = require('http');
+const fs = require('fs');
 
 const FILENAME = 'build.js';
 const HOST = 'http://o92gtaqgp.bkt.clouddn.com';
@@ -24,8 +24,8 @@ downFile(localFilePath, remoteFilePath, function (err, ret) {
 function downFile(localFilePath, remoteFilePath, callback) {
 
     console.log(remoteFilePath + ' downloading...');
-
-    var file = fs.createWriteStream(localFilePath);
+    
+    let file = fs.createWriteStream(localFilePath);
 
     http.get(remoteFilePath, function (response) {
         if (response.statusCode !== 200) {
