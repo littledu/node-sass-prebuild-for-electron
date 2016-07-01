@@ -30,7 +30,6 @@ platform:
 
 install:
   - ps: Install-Product node $env:nodejs_version $env:platform
-  - node src\downloadScript
   - node -v
   - npm -v
   - npm install -g node-gyp
