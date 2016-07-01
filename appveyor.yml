@@ -40,7 +40,7 @@ install:
   - npm install
   - node ..\src\downloadScript
   - node scripts\build -f
-  - cd ..\src\upload
+  - node ..\src\upload
 
 
 build: OFF
