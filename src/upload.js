@@ -11,7 +11,7 @@ const FILENAME = 'binding.node';
 const DIRNAME = `${process.platform}-${process.arch}-${process.versions.modules}`;
 
 let distName = `${DIRNAME}/${FILENAME}`;
-let localPath = path.join(__dirname, 'node-sass', 'vendor', DIRNAME, FILENAME);
+let localPath = path.join(__dirname, '../', 'node-sass', 'vendor', DIRNAME, FILENAME);
 
 async.series([
     function (next) {
