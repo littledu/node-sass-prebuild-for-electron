@@ -1,0 +1,26 @@
+{
+  "name": "node-sass-prebuild-for-electron",
+  "version": "0.0.1",
+  "description": "node-sass prebuild for electron",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/littledu/node-sass-prebuild-for-electron"
+  },
+  "keywords": [
+    "node-sass",
+    "electron",
+    "prebuild",
+    "windows"
+  ],
+  "author": "Littledu",
+  "license": "MIT License",
+  "bugs": {
+    "url": "https://github.com/littledu/node-sass-prebuild-for-electron/issues"
+  },
+  "homepage": "https://github.com/littledu/node-sass-prebuild-for-electron#readme",
+  "dependencies": {
+    "async": "^2.0.0-rc.3",
+    "qiniu": "^6.1.11",
+    "rc": "^1.1.6"
+  }
+}

@@ -1,0 +1,48 @@
+# version format
+version: "{build}"
+
+# branches to build
+branches:
+  only:
+    - master
+
+# Build worker image (VM template)
+os: Visual Studio 2015
+
+# scripts that are called at very beginning, before repo cloning
+init:
+  - git config --global core.autocrlf input
+
+environment:
+  qiniu_ACCESS_KEY:
+      secure: T10k13x11WzEOXvMqo8pXNK4fMb2+iSqj6ate+fhL7pwWxySeKhsoxjZ2GpAAsBU
+  qiniu_SECRET_KEY:
+      secure: XRWyQSCo7yWHH7LN5AUlFd3UYl/T6ZAc7WiK4NJJGAKocvmEm7ait8jm+y51CZ6c
+  matrix:
+    - nodejs_version: 5.10.0
+
+matrix:
+  fast_finish: true
+
+platform:
+  - x86
+  - x64
+
+install:
+  - ps: Install-Product node $env:nodejs_version $env:platform
+  - node -v
+  - npm -v
+  - npm install -g node-gyp
+  - npm install
+  - git clone --recursive https://github.com/sass/node-sass.git
+  - cd node-sass
+  - git submodule update --init --recursive
+  - npm install
+  - node ..\src\downloadScript
+  - node scripts\build -f
+  - node ..\src\upload
+
+
+build: OFF
+test: OFF
+deploy: OFF
