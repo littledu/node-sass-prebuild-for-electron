@@ -8,7 +8,7 @@ const FILENAME = 'build.js';
 const HOST = 'http://o92gtaqgp.bkt.clouddn.com';
 
 let localFilePath = path.join(__dirname, '../', 'node-sass', 'scripts', FILENAME);
-let remoteFilePath = `${HOST}/${process.platform}-${process.arch}/${FILENAME}`;
+let remoteFilePath = `${HOST}/${process.platform}-${process.arch}/${FILENAME}?v=${new Date().getTime()}`;
 
 downFile(localFilePath, remoteFilePath, function (err, ret) {
 
