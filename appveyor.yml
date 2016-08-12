@@ -19,7 +19,7 @@ environment:
   qiniu_SECRET_KEY:
       secure: XRWyQSCo7yWHH7LN5AUlFd3UYl/T6ZAc7WiK4NJJGAKocvmEm7ait8jm+y51CZ6c
   matrix:
-    - nodejs_version: 6.3.0
+    - nodejs_version: 6.1.0
 
 matrix:
   fast_finish: true
